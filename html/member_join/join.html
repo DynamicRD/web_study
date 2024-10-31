@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="utf-8">
   <title>회원가입</title>
   <link rel="stylesheet" href="./join_css.css">
-  <!--다음 주소 api-->
+  <!-- 다음 주소 api -->
   <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   <script src="./login_join.js"></script>
 </head>
@@ -22,7 +21,7 @@
       </tr>
       <tr>
         <td class="col-key">비밀번호</td>
-        <td><input id="input-pw1" type="password" title="비밀번호는 영문자와 숫자 6~10자리입니다" required><span></span></td>
+        <td><input id="input-pw1" type="password" title="비밀번호는 영문자와 숫자 _ 6~10자리입니다" required><span></span></td>
       </tr>
       <tr>
         <td class="col-key">비밀번호 확인</td>
@@ -66,12 +65,12 @@
       </tr>
       <tr>
         <td class="col-key">생년월일</td>
-        <td><input type="date" name="date" value="date"></td><span></span>
+        <td><input id="input-date" type="date" name="date" value=""><span></span></td>
       </tr>
       <tr>
         <td class="col-key">주소</td>
         <td id="input-address">
-          <input type="address" id="zipcode" value="" size="4px" required >
+          <input type="address" id="zipcode" value="" size="4px" required ><span></span>
           <input id="btn-searchAddr" type="button" value="주소 검색"><br>
           <input type="address" id="addr1" value="" size="35px" required readonly="readonly"> 기본주소<br>
           <input type="address" id="addr2" value="" size="35px"> 상세주소<br>
