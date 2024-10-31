@@ -39,8 +39,10 @@
             divParent.addEventListener("click",()=>{
                 alert(`divParent`);
             });
-            divChild.addEventListener("click",()=>{
+            divChild.addEventListener("click",(event)=>{
                 alert(`divChild`);
+                event.stopPropagation;
+
             });
         }
     </script>
