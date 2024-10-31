@@ -83,7 +83,7 @@ div.dropdown-content a:hover{
     .article{
         border: 1px solid black;
         width: 1000px;
-        height: 400px;
+        height: 465px;
         position: relative;
     }
     img{
@@ -142,7 +142,7 @@ div.dropdown-content a:hover{
     div.slideshow {
     background-color: black;
     height: 465px;
-    min-width: 960px;
+    min-width: 1000px;
     position: relative;
 }
 
@@ -235,13 +235,7 @@ div.shlideshow_indicator a.active {
         height: 25px;
     }
     .long{
-        width: 450px;
-    }
-    #id{
-        width: 280px;
-    }
-    #email{
-        width: 165px;
+        width: 300px;
     }
     .section button{
         height: 25px;
@@ -255,6 +249,7 @@ div.shlideshow_indicator a.active {
         background-color: greenyellow;
         text-align: center;
     }
+   
      /*-----------------*/
     .footer{
         border: 1px solid black;
@@ -270,7 +265,7 @@ div.shlideshow_indicator a.active {
 </head>
 
 
-<body;>
+<body onload="onLoad()";>
     <div class="header">
          <p>
             <i class="fa-solid fa-camera"></i> MIRE PHOTO
@@ -345,54 +340,74 @@ div.shlideshow_indicator a.active {
                 <td>
                     <div class="section">
                         <h3>MIRE PICTURE</h3>
-                        <form action="text" method="get">
-                            <label for="id">아이디</label><br>
-                            <input type="text" name="id" id="id">
-                            <input type="text" name="email" id="email" placeholder="@naver.com"><br>
-                            <label for="pwd">비밀번호</label><br>
-                            <input type="password" name="pwd" id="pwd" class="long"><br>
-                            <label for="pwd2">비밀번호 재확인</label><br>
-                            <input type="password" name="pwd2" id="pwd2" class="long"><br>
-                            <label for="name">이름</label><br>
-                            <input type="text" name="name" id="name" class="long"><br>
-                            <label for="birth">생년월일</label><br>
-                            <input type="text" name="birth" id="birth" placeholder="년(4자)">
-                            <select name="month" id="month" class="monthselect">
-                                <option value="0">월</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                            <input type="text" name="day" id="day" placeholder="일"><br>
-                            <label for="gender">성별</label><br>
-                            <select name="gender" id="gender" class="long">
-                                <option value="0">성별</option>
-                                <option value="1">남</option>
-                                <option value="2">여</option>
-                            </select><br>
-                            <label for="emailre">본인 확인 이메일 (선택)</label><br>
-                            <input type="text" name="emailre" id="emailre" placeholder="선택입력" class="long"><br>
-                            <label for="tel">휴대전화</label><br>
-                            <select name="contry" id="contry" class="long">
-                                <option value="0">대한민국 +82</option>
-                                <option value="1">미국 +1</option>
-                                <option value="2">일본 +81</option>
-                                <option value="2">중국 +86</option>
-                            </select><br>
-                            <input type="text" name="tel" id="tel">
-                            <button type="button">인증번호 받기</button><br>
-                            <input type="text" name="identify_num" id="identify_num" placeholder="인증번호를 입력하세요" class="long"><br>
-                            <button type="button" class="long">가입하기</button>
-                        </form>
+                        <form action="#" method="post" id="div-main" class="myform" style="font-size: 12px;">
+                            <div class="title-table">사이트 이용정보 입력</div>
+                            <table>
+                              <tr>
+                                <td class="col-key">아이디</td>
+                                <td><br>
+                                  <input id="input-id" size="35px" type="text" name="" value="" required placeholder="영문자, 숫자, _ 최소 3자 이상"><span></span></td>
+                              </tr>
+                              <tr>
+                                <td class="col-key">비밀번호</td>
+                                <td><input id="input-pw1" size="35px" type="password" placeholder="영문자와 숫자 _ 6~10자리" required><span></span></td>
+                              </tr>
+                              <tr>
+                                <td class="col-key">비밀번호 확인</td>
+                                <td><input id="input-pw2" size="35px" type="password" name="" value="" required placeholder="영문자와 숫자 _ 6~10자리" ><span></span></td>
+                              </tr>
+                              <tr>
+                                <td class="col-key">이름</td>
+                                <td><input id="input-name" size="35px" type="text" name="" value="" required placeholder="한글 2~4자,영문 2-10 첫글자 대문자 공백가능"><span></span></td>
+                              </tr>
+                              <tr>
+                                <td class="col-key">닉네임</td>
+                                <td>
+                                  <input id="input-nickname" size="35px" type="text" name="" value="" required placeholder="공백없이 한글,영문,숫자만 4글자 이상"><span></span></td>
+                              </tr>
+                              <tr>
+                                <td class="col-key">E-mail</td>
+                                <td><input id="input-email" size="35px" type="email" name="" value="" required><span></span></td>
+                              </tr>
+                              <tr>
+                                <td class="col-key">가입경로</td>
+                                <td>
+                                  <input type="radio" name="joinRoute" value="">인터넷검색
+                                  <input type="radio" name="joinRoute" value="">배너광고
+                                  <input type="radio" name="joinRoute" value="">언론기사
+                                  <input type="radio" name="joinRoute" value="" checked>기타
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="col-key">전화번호</td>
+                                <td><input id="input-tel" size="35px" type="tel" name="" value="" required><span></span></td>
+                              </tr>
+                              <tr>
+                                <td class="col-key">휴대폰번호</td>
+                                <td><input id="input-mobile" size="35px" type="tel" name="" value="" required><span></span></td>
+                              </tr>
+                              <tr>
+                                <td class="col-key">생년월일</td>
+                                <td><input id="input-date" type="date" name="date" value=""><span></span></td>
+                              </tr>
+                              <tr>
+                                <td class="col-key">주소</td>
+                                <td id="input-address">
+                                  <input type="address" id="zipcode" value="" size="4px" required ><span></span>
+                                  <input id="btn-searchAddr" type="button" value="주소 검색"><br>
+                                  <input type="address" id="addr1" value="" size="35px" required readonly="readonly"> 기본주소<br>
+                                  <input type="address" id="addr2" value="" size="35px"> 상세주소<br>
+                                  <input type="address" name="" value="" size="35px"> 참고항목
+                                </td>
+                              </tr>
+                            </table>
+                        
+                            <div id="btns-submit">
+                              <input id="btn-join" type="submit" value="회원가입" onclick="joinMember();">
+                              <input id="btn-cancel" type="reset" name="" value="취소" onclick="reset();">
+                            </div>
+                          </form>
+
                     </div>
                 </td>
                 <td>
@@ -409,5 +424,5 @@ div.shlideshow_indicator a.active {
     <div class="footer">
         <h1>footer</h1>
     </div>
-</body;>
+</body>
 </html>
