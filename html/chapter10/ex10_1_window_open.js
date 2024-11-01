@@ -14,7 +14,7 @@ function onLoad(){
         win = window.open("./ex8_2_formName.html","_blank","width=400, height=400, left=30, top=30");
         setTimeout(()=>{
             win.document.querySelector("#userid").value = idobj.value;
-            win.document.querySelector("#pwd").value = idobj.value;
+            win.document.querySelector("#pwd").value = pwdobj.value;
          }, 100);
         
         
