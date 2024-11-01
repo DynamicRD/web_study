@@ -2,7 +2,7 @@ function onLoad(){
     //패턴검색
     const idPattern = /^[\w]{3,}$/; //[\w]는 영문자, 숫자, _만 입력 가능 {3,} 3글자이상가능
     const pwdPattern =/^[\w]{6,10}$/; //영문자와 숫자, _ 6~10  
-    const namePattern =/^[가-힣]{2,4}|[A-Z]{1}[a-zA-Z\x20]{1,19}$/; //한글 2~4글자,영문자 2-20 첫글자는대문자 공백가능   
+    const namePattern =/^[가-힣]{2,4}$/; //한글 2~4글자,영문자 2-20 첫글자는대문자 공백가능   
     const nicknamePattern =/^[\w가-힣]{4,}$/;//공백없이 한글,영문,숫자,_만 입력 가능(4글자 이상)   
     const emailPattern =/^[a-z0-9_+.-]+@([a-z0-9-]+\.)+[a-z0-9]{2,4}$/;
     const telPattern =/^[\d]{2,3}-[\d]{3,4}-[\d]{4}$/; //\d 숫자만가능
@@ -27,12 +27,12 @@ function onLoad(){
     const myform= document.querySelector(".myform");
 
     //이벤트리스너등록및 핸들러처리
-    inputID.addEventListener("blur",()=>validate(inputID, idPattern, "영문자, 숫자, _만 입력 가능" ));
-    inputPW1.addEventListener("blur",()=>validate(inputPW1,pwdPattern, "영문자와 숫자, _ 6~10" ));
+    inputID.addEventListener("blur",()=>validate(inputID, idPattern, "형식 불일치" ));
+    inputPW1.addEventListener("blur",()=>validate(inputPW1,pwdPattern, "형식 불일치" ));
     inputPW2.addEventListener("blur",()=>{
-        validate(inputPW2,pwdPattern, "영문자와 숫자, _ 6~10" );
+        validate(inputPW2,pwdPattern, "형식 불일치" );
         if(inputPW1.value !== inputPW2.value){
-            inputPW2.nextSibling.textContent ="패스워드가 일치하지 않음";
+            inputPW2.nextSibling.textContent ="패스워드 불일치";
             inputPW2.nextSibling.style.color ="red";
             inputPW1.value="";
             inputPW2.value="";
@@ -40,11 +40,11 @@ function onLoad(){
             return; 
         }
     });
-    inputName.addEventListener("blur",()=>validate(inputName,namePattern, "한글 2~4글자,영문자 2-10 첫글자는대문자 공백가능" ));
-    inputNickname.addEventListener("blur",()=>validate(inputNickname,nicknamePattern, "공백없이 한글,영문,숫자,_만 입력 가능(4글자 이상)" ));
-    inputEmail.addEventListener("blur",()=>validate(inputEmail,emailPattern, "이메일형식 안맞음" ));
-    inputTel.addEventListener("blur",()=>validate(inputTel,telPattern, "전화번호형식이 안맞음" ));
-    inputMobile.addEventListener("blur",()=>validate(inputMobile,mobilePattern, "모바일전화번호형식이 안맞음" ));
+    inputName.addEventListener("blur",()=>validate(inputName,namePattern, "형식 불일치" ));
+    inputNickname.addEventListener("blur",()=>validate(inputNickname,nicknamePattern, "형식 불일치" ));
+    inputEmail.addEventListener("blur",()=>validate(inputEmail,emailPattern, "형식 불일치" ));
+    inputTel.addEventListener("blur",()=>validate(inputTel,telPattern, "형식 불일치" ));
+    inputMobile.addEventListener("blur",()=>validate(inputMobile,mobilePattern, "형식 불일치" ));
     inputDate.addEventListener("blur",()=>validate(inputDate,datePattern, "날짜를 선택해주세요" ));
     btnSearchAddr.addEventListener("click",()=>{
         new daum.Postcode({
@@ -58,22 +58,22 @@ function onLoad(){
     //폼 이벤트등록및 핸들러처리
     myform.addEventListener("submit",(e)=>{
         e.preventDefault();  //서버에 전송하는 기본기능막는다.
-        validate(inputID, idPattern, "영문자, 숫자, _만 입력 가능" );
-        validate(inputPW1,pwdPattern, "영문자와 숫자, _ 6~10" );
-        validate(inputPW2,pwdPattern, "영문자와 숫자, _ 6~10" );
+        validate(inputID, idPattern, "형식 불일치" );
+        validate(inputPW1,pwdPattern, "형식 불일치" );
+        validate(inputPW2,pwdPattern, "형식 불일치" );
         if(inputPW1.value !== inputPW2.value){
-            inputPW2.nextSibling.textContent ="패스워드가 일치하지 않음";
+            inputPW2.nextSibling.textContent ="패스워드 불일치";
             inputPW2.nextSibling.style.color ="red";
             inputPW1.value="";
             inputPW2.value="";
             inputPW1.focus(); 
             return; 
         }
-        validate(inputName,namePattern, "한글 2~4글자,영문자 2-10 첫글자는대문자 공백가능" );
-        validate(inputNickname,nicknamePattern, "공백없이 한글,영문,숫자,_만 입력 가능(4글자 이상)" );
-        validate(inputEmail,emailPattern, "이메일형식 안맞음" );
-        validate(inputTel,telPattern, "전화번호형식이 안맞음" );
-        validate(inputMobile,mobilePattern, "모바일전화번호형식이 안맞음" );
+        validate(inputName,namePattern, "형식 불일치" );
+        validate(inputNickname,nicknamePattern, "형식 불일치" );
+        validate(inputEmail,emailPattern, "형식 불일치" );
+        validate(inputTel,telPattern, "형식 불일치" );
+        validate(inputMobile,mobilePattern, "형식 불일치" );
         validate(inputDate,datePattern,"날짜를 선택해주세요");
         if(zipcode.value === "" ||  addr1.value  === ""){
             zipcode.nextSibling.textContent ="주소선택해주세요";
