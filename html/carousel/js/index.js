@@ -31,7 +31,7 @@ function carousel(){
      indicatorArray[index].classList.add('active');
     } //end of gotoslide
  
-    gotoslide(1);
+    
  
     //3초마다 gotoslide() 불러주자. 
     //불러주되, index 0,1,2,3,0,1,..
