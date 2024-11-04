@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=""></script>
+</head>
+<style>
+    .article1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid skyblue;
+        width: 600px;
+        height: 500px;
+        background-color: rgb(182, 218, 233);
+        
+    }
+    .article2{
+        border: 1px solid lightgray;
+        width: 400px;
+        height: 400px;
+        background-color: rgb(215, 224, 228);
+        padding: 20px;
+        padding-top: 50px;
+        text-align: right;
+    }
+    input{
+        width: 250px;
+        border: 0px;
+       background-color: rgb(215, 224, 228);
+    }
+    button{
+        width: 380px;
+        height: 50px;
+        background-color: rgb(185, 219, 185);
+        color: rgb(63, 129, 63);
+        font-size: 16px;
+    }
+    .idlabel{
+        margin-right: 52px;
+    }
+    .pwdlabel{
+        margin-right: 38px;
+    }
+    .emaillabel{
+        margin-right: 55px;
+    }
+    .addrlabel{
+        margin-right: 70px;
+    }
+</style>
+<body onload="onLoad();">
+    <div class="article1">
+        <div class="article2">
+            <form action="submit" method="post" id="myform">
+                <label for="id" class="idlabel"><b>아이디</b></label>
+                <input type="text" name="id" id="id"  placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br>
+                <label for="pwd1" class="pwdlabel"><b>패스워드</b></label>
+                <input type="pwd" name="pwd1" id="pwd1" placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br>
+                <label for="pwd2"><b>패스워드 확인</b></label>
+                <input type="pwd" name="pwd2" id="pwd2" placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br>
+                <label for="email" class="emaillabel"><b>이메일</b></label>
+                <input type="email" name="email" id="email" placeholder="_ _ _ _ _ _ _ _ _ _ @ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br>
+                <label for="addr" class="addrlabel"><b>주소</b></label>
+                <input type="text" name="addr1" id="addr"  placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br>
+                <input type="text" name="addr2" id="addr"  placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br><br>
+                <button type="button"><b>가 입</b></button><span></span></a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

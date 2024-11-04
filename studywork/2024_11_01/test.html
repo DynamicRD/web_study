@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title{
+            width: 250px;
+            margin-bottom: 10px;
+        }
+        #content{
+            width: 250px;
+            height: 100px;
+            text-align: start;
+            margin-bottom: 10px;
+        }
+        .titlelabel{
+            margin-right: 32px;
+        }
+        .contentlabel{
+            position: relative;
+            bottom: 60px;
+            margin-right: 32px;
+        }
+        .write{
+            width: 250px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        table,tr,td,th{
+            border: 1px solid black;
+        }
+        .one{
+            width: 40px;
+        }
+        .two{
+            width: 400px;
+        }
+        .orange{
+            background-color: lightsalmon;
+            color: white;
+        }
+        .beige{
+            background-color: beige;
+        }
+    </style>
+    <script src="test.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>공지사항 작성하기</legend>
+        <form action="insert.no" method="post" id="myform">
+            <label for="title" class="titlelabel"><b>제목</b></label>
+            <input type="text" name="title" id="title" placeholder="제목을 입력하시오."><br>
+            <label for="content" class="contentlabel"><b>내용</b></label>
+            <textarea name="content" id="content"  placeholder="내용을 입력하시오."></textarea><br>
+            <label for=""><b>첨부파일</b></label>
+            <button type="button" name="uploadFile">파일 선택</button><span>선택된 파일 없음</span><br>
+            <div class="write">
+                <button type="button">작성하기</button>
+            </div>
+            
+        </form>
+    </fieldset>
+    <hr>
+    <table>
+        <tr class="orange">
+            <th class="one">번호</th>
+            <th colspan="2">제목</th>
+            
+            <th>작성자</th>
+            <th>작성일</th>
+            <th>조회수</th>
+        </tr>
+        <tr class="beige">
+            <td class="one">9</td>
+            <td class="two">공지사항 제목 9</td>
+            <td class="three"><button type="button">바로가기</button></td>
+            <td class="four">user01</td>
+            <td class="five">2021-03-29</td>
+            <td class="six">34</td>
+        </tr>
+        <tr class="beige">
+            <td>6</td>
+            <td>공지사항 제목 6</td>
+            <td><button type="button">바로가기</button></td>
+            <td>answ445</td>
+            <td>2021-03-12</td>
+            <td>67</td>
+        </tr>
+        <tr class="beige">
+            <td>3</td>
+            <td>공지사항 제목 3</td>
+            <td><button type="button">바로가기</button></td>
+            <td>testg12</td>
+            <td>2021-03-01</td>
+            <td>98</td>
+        </tr>
+        <tr class="beige">
+            <td>2</td>
+            <td>공지사항 제목 2</td>
+            <td><button type="button">바로가기</button></td>
+            <td>palwe3</td>
+            <td>2021-01-02</td>
+            <td>85</td>
+        </tr>
+        <tr class="beige">
+            <td>1</td>
+            <td>공지사항 제목 1</td>
+            <td><button type="button">바로가기</button></td>
+            <td>xnl23</td>
+            <td>2020-12-24</td>
+            <td>124</td>
+        </tr>
+        <tr  class="orange">
+            <th colspan="4">전체공지사항 갯수</th>
+           
+          
+       
+            <th colspan="2">5개</th>
+            
+        </tr>
+    </table>
+</body>
+</html>
