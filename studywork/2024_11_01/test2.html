@@ -32,6 +32,7 @@
        background-color: rgb(215, 224, 228);
     }
     button{
+        display: block;
         width: 380px;
         height: 50px;
         background-color: rgb(185, 219, 185);
@@ -51,21 +52,22 @@
         margin-right: 70px;
     }
 </style>
+<script src="test2.js"></script>
 <body onload="onLoad();">
     <div class="article1">
         <div class="article2">
-            <form action="submit" method="post" id="myform">
+            <form action="#" method="post" id="myform">
                 <label for="id" class="idlabel"><b>아이디</b></label>
-                <input type="text" name="id" id="id"  placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br>
+                <input type="text" name="id" id="id"  placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><p></p><br>
                 <label for="pwd1" class="pwdlabel"><b>패스워드</b></label>
-                <input type="pwd" name="pwd1" id="pwd1" placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br>
+                <input type="password" name="pwd1" id="pwd1" placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><p></p><br>
                 <label for="pwd2"><b>패스워드 확인</b></label>
-                <input type="pwd" name="pwd2" id="pwd2" placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br>
-                <label for="email" class="emaillabel"><b>이메일</b></label>
-                <input type="email" name="email" id="email" placeholder="_ _ _ _ _ _ _ _ _ _ @ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br>
+                <input type="password" name="pwd2" id="pwd2" placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><p></p><br><br>
+                <label for="email1" class="emaillabel"><b>이메일</b></label>
+                <input type="text" name="email" id="email" placeholder="_ _ _ _ _ _ _ _ _ _ _@_ _ _ _ _ _ _ _ _ _ _"><br><br>
                 <label for="addr" class="addrlabel"><b>주소</b></label>
                 <input type="text" name="addr1" id="addr"  placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br>
-                <input type="text" name="addr2" id="addr"  placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br><br>
+                <input type="text" name="addr2" id="addr2"  placeholder="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"><span></span><br><br><br>
                 <button type="button"><b>가 입</b></button><span></span></a>
             </form>
         </div>

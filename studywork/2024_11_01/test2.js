@@ -9,8 +9,19 @@ function onLoad(){
     const btn = document.querySelector("button");
     const myform = document.querySelector("#myform");
 
-    //핸들러 처리
+    //이벤트 리스너 등록 및 핸들러 처리
     pwd1.addEventListener("blur",vaildate(pwd1,pwdpattern,"영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자"));
+    pwd1.addEventListener("click",()=>{
+        pwd1.nextSibling.textContent = "영문자 대/소문자 특수문자, 숫자 포함 8 ~ 32자";
+    });
+    id.addEventListener("blur", validate2(id));
+    pwd2.addEventListener("blur", validate2(pwd2));
+    pwd1.addEventListener("blur", validate2(pwd));
+    function validate2(obj){
+        if(obj.value.length <= 0){
+            obj.nextSibling.textContent = "필수입력항목";
+        }
+    }
     //버튼 이벤트 활성화
     btn.addEventListener("click",(e)=>{
         e.preventDefault();
