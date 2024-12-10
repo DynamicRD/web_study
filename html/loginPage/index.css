@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    background-color: bisque;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* 헤더 */
+.header{
+border: 1px solid black;
+width: 1500px;
+height: 100px;
+display: flex;
+flex-direction: row;
+font-size: 30px;
+text-align: center;
+justify-content: space-between;
+align-items: center;
+padding: 30px;
+margin : 0 auto;
+}
+.header ul > li > a{
+display: inline-block;
+width: 100px;
+padding: 16px 16px;
+text-align: center;
+}
+.header ul > li:hover > a{
+background-color: skyblue;
+}
+
+.dropdown{
+position: relative;
+}
+
+div.dropdown-content {
+display: none;
+position: absolute;
+background-color: rgb(19, 224, 122);
+min-width: 160px;
+z-index: 2;
+box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+div.dropdown-content a{
+display: block;
+padding: 16px 16px;;
+z-index: 2;
+}
+
+div.dropdown-content a:hover{
+background-color: aqua;
+z-index: 2;
+}
+
+.dropdown:hover .dropdown-content{
+display: block;
+z-index: 2;
+}
+
+
+/* 슬라이드 */
+div.slideshow {
+    background-color: black;
+    height: 465px;
+    width: 1500px; 
+    position: relative;
+    margin: 0 auto; 
+    overflow: hidden;
+}
+
+div.slideshow_slides {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+}
+
+div.slideshow_slides a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+div.slideshow_slides a img {  /* 이미지 크기 조정 */
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 이미지가 잘리지 않도록 크기를 조정 */
+}
+
+div.slideshow_nav a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: white;
+    font-size: 62px;
+    transform: translateY(-50%);
+    opacity: 0.5;
+}
+
+div.slideshow_nav a.prev {
+    margin-left: -462px; 
+}
+
+div.slideshow_nav a.next {
+    margin-left: 400px; 
+}
+
+div.shlideshow_indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+div.shlideshow_indicator a {
+    display: inline-block;
+    color: white;
+    padding: 7px;
+    font-size: 24px;
+}
+
+div.shlideshow_indicator a.active {
+    color: rgb(213, 73, 9);
+}
+
+.tbody{
+    display: flex;
+    flex-direction: row;
+    background-color: aqua;
+    margin: 0 auto;
+}
+
+
+/* 왼쪽 */
+div.left{
+    border: 1px solid black;
+    width: 300px;
+    height: 1000px;
+}
+.left .left1{
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 250px;
+    height: 400px;
+    margin-bottom: 50px;
+}
+.left .left2{
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 250px;
+    height: 400px;
+}
+
+/* 센터 */
+div.center{
+    border: 1px solid black;
+    width: 900px;
+    height: 1000px;
+}
+.maintable{
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 850px;
+    height: auto;
+}
+
+.maintable th,tr,td{
+    margin: 0 auto;
+    border: 1px solid black;
+    height: 40px;
+}
+.maintable .num{
+    width: 100px;
+}
+.maintable .title{
+    width: 300px;
+}
+.maintable .comments{
+    width: 50px;
+}
+.maintable .writer{
+    width: 100px;
+}
+.maintable .day{
+    width: 100px;
+}
+.maintable .recommend{
+    width: 50px;
+}
+.main_footer{
+    margin: 0 auto;
+    width: 50px;
+}
+/* 우측 */
+div.right{
+    border: 1px solid black;
+    width: 300px;
+    height: 1000px;
+}
+
+.right .login{
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 250px;
+    height: 400px;
+}
+.login_table{
+    margin: 0 auto;
+}
+.login th{
+    width: 50px;
+}
+.login td{
+    width: 150px;
+}
+.login_select{
+    width: 200px;
+}
+/* 푸터 */
+.footer{
+    margin: 0 auto;
+    width: 1400px;
+    height: 300px;
+}
+
