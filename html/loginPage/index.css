@@ -224,26 +224,31 @@ div.right{
     border: 1px solid black;
     width: 300px;
     height: 1000px;
+    margin: 0 auto;
 }
 
 .right .login{
     margin: 0 auto;
     border: 1px solid black;
     width: 250px;
-    height: 400px;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .login_table{
     margin: 0 auto;
 }
-.login th{
-    width: 50px;
+.login_block input{
+    margin: 0 auto;
+    width: 125px;
 }
-.login td{
-    width: 150px;
+.login tr,td,th{
+    border: 1px solid black;
 }
-.login_select{
-    width: 200px;
-}
+
+
+
 /* 푸터 */
 .footer{
     margin: 0 auto;
