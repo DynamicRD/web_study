@@ -1,0 +1,241 @@
+/* 기본 스타일 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4; /* 부드러운 회색 배경 */
+    color: #333;
+    display: flex;
+    justify-content: center; /* 페이지 중앙 정렬 */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    min-width: 1000px;  /* 최소 너비를 설정하여 화면 크기 줄어들 때 본문 내용이 축소되지 않도록 함 */
+    padding: 20px;
+}
+
+/* Header 스타일 */
+header {
+    background: linear-gradient(45deg, #d1d8e0, #e5e9f0); /* 밝은 회색과 파스텔 블루 그라데이션 */
+    color: #333;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+nav {
+    margin-top: 12px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button {
+    background-color: #aab7b8; /* 부드러운 회색 */
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.dropdown button:hover {
+    background-color: #889b9f; /* 호버 시 약간 어두운 회색 */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #aab7b8;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #889b9f;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 슬라이드 */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.nav-btn {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: white;
+    padding: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #d1d8e0; /* 밝은 회색 */
+}
+
+/* 세로로 쌓인 블록이 가로로 4개씩 정렬 */
+.table-container {
+    margin: 50px 0;
+}
+
+.items {
+    display: flex;
+    flex-wrap: nowrap; /* 아이템들이 한 줄로 배치되도록 */
+    gap: 20px;
+    justify-content: flex-start;
+    overflow-x: auto; /* 화면이 좁을 경우 가로 스크롤을 허용 */
+}
+
+.item {
+    width: calc(25% - 20px); /* 각 아이템의 너비를 고정 */
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.item p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+    .item {
+        width: calc(50% - 20px); /* 화면 크기가 1024px 이하일 때 한 줄에 2개의 항목 */
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        width: calc(100% - 20px); /* 화면 크기가 768px 이하일 때 한 줄에 1개의 항목 */
+    }
+}
+
+footer {
+    background-color: #d1d8e0; /* 밝은 회색 */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 14px;
+}
