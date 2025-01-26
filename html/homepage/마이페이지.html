@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- 프로필 섹션 -->
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th><img src="cinqueterre.jpg" class="img-thumbnail" alt="Cinque Terre"></th>
+          <th>프로필 정보들</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2">장문의 자기 PR글</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <!-- 보유 금액 및 충전 섹션 -->
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>보유금액</th>
+          <th>충전하기</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>₩ 500,000</td>
+          <td><button class="btn btn-warning">충전하기</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 최근 활동 -->
+    <div class="panel panel-info">
+      <div class="panel-heading">최근 활동</div>
+      <div class="panel-body">
+        <ul>
+          <li>2025년 1월 25일: '모임1'에 참가</li>
+          <li>2025년 1월 20일: '모임2' 리뷰 작성</li>
+          <li>2025년 1월 18일: '모임3'에 참가</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 알림 -->
+    <div class="panel panel-danger">
+      <div class="panel-heading">알림</div>
+      <div class="panel-body">
+        <ul>
+          <li>모임1의 참가자 리뷰가 추가되었습니다!</li>
+          <li>모임2의 일정이 변경되었습니다.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 회원 등급 -->
+    <div class="panel panel-default">
+      <div class="panel-heading">회원 등급</div>
+      <div class="panel-body">
+        <p>현재 회원 등급: <strong>플래티넘</strong></p>
+        <p>남은 포인트: <strong>3500 포인트</strong></p>
+      </div>
+    </div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li><a href="#">진행중인모임</a></li>
+            <li><a href="#">찜목록</a></li>
+            <li><a href="#">완료된모임</a></li>
+          </ul>
+        </div>
+      </nav>
+    <!-- 최근 모임 목록 -->
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>모임명</th>
+          <th>참가일시</th>
+          <th>직책</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@example.com</td>
+        </tr>
+        <tr>
+          <td>Mary</td>
+          <td>Moe</td>
+          <td>mary@example.com</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 버튼 섹션 -->
+    <button type="button" class="btn btn-primary btn-block">작성리뷰 확인하기</button>
+    <button type="button" class="btn btn-primary btn-block">결재내역 확인하기</button>
+    <button type="button" class="btn btn-primary btn-block">개인정보 수정하기</button>
+    <button type="button" class="btn btn-danger btn-block">회원탈퇴</button>
+  </div>
+</body>
+</html>
